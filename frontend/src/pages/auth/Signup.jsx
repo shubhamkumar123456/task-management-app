@@ -34,7 +34,7 @@ const Signup = (props) => {
   }
   return (
     <div className='container'>
-      <h2 className='my-4'>iNotenook signUp page</h2>
+      <h2 className='my-4'>Task Management signUp page</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
