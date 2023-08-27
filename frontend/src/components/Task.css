@@ -70,7 +70,7 @@ text-align: center;
     color: green;
 }
 
-@media only screen and (max-width:850px) {
+/* @media only screen and (max-width:850px) {
     .taskContent{
         width: 600px;
     }
@@ -84,4 +84,4 @@ text-align: center;
     .taskContent{
         width: 70%;
     }
-}
+} */
