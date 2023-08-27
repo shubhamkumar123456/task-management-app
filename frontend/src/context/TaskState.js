@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import TaskContext from "./TaskContext";
 
 const TaskState = (props) => {
-  const host = "http://localhost:3001"
+  const host = "https://task-management-api-taupe.vercel.app"
   const notesInitial = [{}];
   const [notes, setnotes] = useState(notesInitial);
   // get all notes

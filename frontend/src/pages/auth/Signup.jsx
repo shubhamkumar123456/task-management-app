@@ -9,7 +9,7 @@ const Signup = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3001/api/auth/create', {
+    const response = await fetch('https://task-management-api-taupe.vercel.app/api/auth/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
