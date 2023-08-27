@@ -10,7 +10,8 @@
 .taskContent{
     background-color: black;
     margin: 10px 0;
-    width: 70%;
+    width: max-content;
+    padding: 10px;
     color: white;
     border-radius: 30px;
     
