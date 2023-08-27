@@ -69,3 +69,19 @@ text-align: center;
 .taskNotesTitleCross.green{
     color: green;
 }
+
+@media only screen and (max-width:850px) {
+    .taskContent{
+        width: 600px;
+    }
+}
+@media only screen and (max-width:650px) {
+    .taskContent{
+        width: 400px;
+    }
+}
+@media only screen and (max-width:450px) {
+    .taskContent{
+        width: 70%;
+    }
+}
