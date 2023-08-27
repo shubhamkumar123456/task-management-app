@@ -1,6 +1,7 @@
 
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Signup from './pages/auth/Signup';
 import Login from './pages/auth/Login';
 import Home from './pages/Home';
@@ -29,8 +30,10 @@ function App() {
       <Alert alert={alert}/>
       <Routes>
       <Route path='/' element={<Home showAlert={showAlert}/>}/>
+     { !token && <Route path='/' element={ <Navigate to="/login" /> }/>}
         <Route path='/signup' element={<Signup showAlert={showAlert}/>}/>
         <Route path='/login' element={<Login showAlert={showAlert}/>}/>
+       
       </Routes>
       </BrowserRouter>
       </TaskState>
