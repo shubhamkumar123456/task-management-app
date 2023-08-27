@@ -24,6 +24,7 @@ const Login = (props) => {
       // save the auth token and redirect
       localStorage.setItem('token', json.authtoken)
       ctx.getNotes();
+      navigate("/");
       props.showAlert( "Logged in successfully ","success")
       ctx.getNotes();
       navigate("/");
