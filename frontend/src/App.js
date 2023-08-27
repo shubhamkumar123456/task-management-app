@@ -29,7 +29,7 @@ function App() {
       <Navbar/>
       <Alert alert={alert}/>
       <Routes>
-      <Route path='/' element={<Home showAlert={showAlert}/>}/>
+     {token && <Route path='/' element={<Home showAlert={showAlert}/>}/>}
      { !token && <Route path='/' element={ <Navigate to="/login" /> }/>}
         <Route path='/signup' element={<Signup showAlert={showAlert}/>}/>
         <Route path='/login' element={<Login showAlert={showAlert}/>}/>
