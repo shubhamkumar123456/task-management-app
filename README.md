@@ -2,7 +2,7 @@
 
 # Installation 
 
-npm install
+npm install , it will install all the dependencies in your application
 
 ## Available Scripts
 
