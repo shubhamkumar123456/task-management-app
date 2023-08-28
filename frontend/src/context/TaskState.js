@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import TaskContext from "./TaskContext";
 
 const TaskState = (props) => {
+  const token =localStorage.getItem('token');
   const host = "https://task-management-api-taupe.vercel.app"
   const notesInitial = [{}];
   const [notes, setnotes] = useState(notesInitial);
@@ -18,10 +19,7 @@ const TaskState = (props) => {
     const allnotes = await response.json()
     setnotes(allnotes)
   }
-useEffect(()=>{
- 
-  getNotes()
-},[])
+
 
   // add a note
   const addNote = async (title, description, markAsComleted) => {
@@ -83,7 +81,7 @@ useEffect(()=>{
     setnotes(newNotes);
   }
   return (
-    <TaskContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes }}>
+    <TaskContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes,token }}>
       {props.children}
     </TaskContext.Provider>
   )
