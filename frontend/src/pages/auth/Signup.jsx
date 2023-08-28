@@ -1,9 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import TaskContext from '../../context/TaskContext'
 
 const Signup = (props) => {
-
+const ctx = useContext(TaskContext);
   let navigate = useNavigate();
   const [credentials, setcredentials] = useState({ name: "", email: "", password: "" });
 
@@ -21,8 +22,9 @@ const Signup = (props) => {
     if (json.success) {
       // save the auth token and redirect
       localStorage.setItem('token', json.authtoken)
+      
+  ctx.getNotes();
       navigate("/");
-      alert("account created successfully")
       // props.showAlert("account created successfully", "success")
     } else {
       alert("Invalid credentials")
