@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { Link,useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import TaskContext from '../../context/TaskContext'
+
 
 const Navbar = () => {
-  const ctx = useContext(TaskContext);
+  const [refreshed, setrefreshed] = useState(false);
   let navigate = useNavigate();
   const token=localStorage.getItem('token')
   const handleLogout = () => {
     localStorage.removeItem('token');
+    setrefreshed(!refreshed)
      navigate("/login");
-     ctx.getNotes();
   }
   let location = useLocation();
   useEffect(()=>{
