@@ -29,11 +29,11 @@ function App() {
       <Navbar/>
       <Alert alert={alert}/>
       <Routes>
-     {token && <Route path='/' element={<Home showAlert={showAlert}/>}/>}
-     { !token && <Route path='/' element={ <Navigate to="/login" /> }/>}
+     <Route path='/' element={<Home showAlert={showAlert}/>}
+   
         <Route path='/signup' element={<Signup showAlert={showAlert}/>}/>
         <Route path='/login' element={<Login showAlert={showAlert}/>}/>
-        {   token &&  <Route path='/login' element={ <Navigate to="/" /> }/>}
+      
       </Routes>
       </BrowserRouter>
       </TaskState>
