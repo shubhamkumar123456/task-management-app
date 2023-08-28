@@ -33,7 +33,7 @@ function App() {
      { !token && <Route path='/' element={ <Navigate to="/login" /> }/>}
         <Route path='/signup' element={<Signup showAlert={showAlert}/>}/>
         <Route path='/login' element={<Login showAlert={showAlert}/>}/>
-       
+        {   token &&  <Route path='/login' element={ <Navigate to="/" /> }/>}
       </Routes>
       </BrowserRouter>
       </TaskState>
