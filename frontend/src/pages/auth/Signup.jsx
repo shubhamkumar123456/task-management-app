@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import TaskContext from '../../context/TaskContext'
+import TaskContext from '../../context/TaskContext';
+
+
 
 const Signup = (props) => {
-const ctx = useContext(TaskContext);
+ const ctx = useContext(TaskContext)
   let navigate = useNavigate();
   const [credentials, setcredentials] = useState({ name: "", email: "", password: "" });
 
@@ -23,7 +25,8 @@ const ctx = useContext(TaskContext);
       // save the auth token and redirect
       localStorage.setItem('token', json.authtoken)
       
-  ctx.getNotes();
+
+      ctx.getNotes();
       navigate("/");
       // props.showAlert("account created successfully", "success")
     } else {
